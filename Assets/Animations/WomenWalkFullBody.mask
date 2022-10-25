@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WomenWalkFullBody
+  m_Mask: 01000000010000000000000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: fs 002_Hips
+    m_Weight: 1
+  - m_Path: fs 002_Hips/fs 002_LeftUpLeg
+    m_Weight: 1
+  - m_Path: fs 002_Hips/fs 002_LeftUpLeg/fs 002_LeftLeg
+    m_Weight: 1
+  - m_Path: fs 002_Hips/fs 002_LeftUpLeg/fs 002_LeftLeg/fs 002_LeftFoot
+    m_Weight: 1
+  - m_Path: fs 002_Hips/fs 002_LeftUpLeg/fs 002_LeftLeg/fs 002_LeftFoot/fs 002_LeftToeBase
+    m_Weight: 1
+  - m_Path: fs 002_Hips/fs 002_RightUpLeg
+    m_Weight: 1
+  - m_Path: fs 002_Hips/fs 002_RightUpLeg/fs 002_RightLeg
+    m_Weight: 1
+  - m_Path: fs 002_Hips/fs 002_RightUpLeg/fs 002_RightLeg/fs 002_RightFoot
+    m_Weight: 1
+  - m_Path: fs 002_Hips/fs 002_RightUpLeg/fs 002_RightLeg/fs 002_RightFoot/fs 002_RightToeBase
+    m_Weight: 1
+  - m_Path: fs 002_Hips/fs 002_Spine
+    m_Weight: 1
+  - m_Path: fs 002_Hips/fs 002_Spine/fs 002_Spine1
+    m_Weight: 1
+  - m_Path: fs 002_Hips/fs 002_Spine/fs 002_Spine1/fs 002_LeftShoulder
+    m_Weight: 1
+  - m_Path: fs 002_Hips/fs 002_Spine/fs 002_Spine1/fs 002_LeftShoulder/fs 002_LeftArm
+    m_Weight: 1
+  - m_Path: fs 002_Hips/fs 002_Spine/fs 002_Spine1/fs 002_LeftShoulder/fs 002_LeftArm/fs
+      002_LeftForeArm
+    m_Weight: 1
+  - m_Path: fs 002_Hips/fs 002_Spine/fs 002_Spine1/fs 002_LeftShoulder/fs 002_LeftArm/fs
+      002_LeftForeArm/fs 002_LeftHand
+    m_Weight: 1
+  - m_Path: fs 002_Hips/fs 002_Spine/fs 002_Spine1/fs 002_Neck
+    m_Weight: 1
+  - m_Path: fs 002_Hips/fs 002_Spine/fs 002_Spine1/fs 002_Neck/fs 002_Head
+    m_Weight: 1
+  - m_Path: fs 002_Hips/fs 002_Spine/fs 002_Spine1/fs 002_RightShoulder
+    m_Weight: 1
+  - m_Path: fs 002_Hips/fs 002_Spine/fs 002_Spine1/fs 002_RightShoulder/fs 002_RightArm
+    m_Weight: 1
+  - m_Path: fs 002_Hips/fs 002_Spine/fs 002_Spine1/fs 002_RightShoulder/fs 002_RightArm/fs
+      002_RightForeArm
+    m_Weight: 1
+  - m_Path: fs 002_Hips/fs 002_Spine/fs 002_Spine1/fs 002_RightShoulder/fs 002_RightArm/fs
+      002_RightForeArm/fs 002_RightHand
+    m_Weight: 1
