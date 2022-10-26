@@ -6,6 +6,7 @@ public class NextPageTimer : MonoBehaviour
     public float delay = 10;
     public bool isManual = false;
     public float findImgDelay = 3;
+    public bool isPage4 = false;
 
     public GameObject nextImage;
 
@@ -25,7 +26,11 @@ public class NextPageTimer : MonoBehaviour
         if (!isManual)
         {
             Invoke("ShowFindNextPageUI", delay);
-            Invoke("ShowFindImgHint", delay + findImgDelay);
+
+            if (isPage4)
+                OnboardingUIManager.Instance.ShowPage4Info(delay + findImgDelay);
+            else
+                OnboardingUIManager.Instance.ShowFindImgHint(delay + findImgDelay);
         }
     }
 
@@ -40,11 +45,8 @@ public class NextPageTimer : MonoBehaviour
         nextImage.SetActive(true);
         _vp.time = 0;
         _vp.Play();
-    }
 
-    public void ShowFindImgHint() 
-    {
-        OnboardingUIManager.Instance.ShowFindImgHint();
+        Invoke("AROff", 1f);
     }
 
     void AROff()

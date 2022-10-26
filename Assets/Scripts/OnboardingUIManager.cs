@@ -160,7 +160,21 @@ public class OnboardingUIManager : MonoBehaviour
 
     public void ShowFindImgHint()
     {
+        FindImgAnimator.gameObject.SetActive(true);
         FindImgAnimator.Play(MarkerManager.Instance.currentTargetPageIndex + "P");
+    }
+
+    public void ShowFindImgHint(float delay) {
+        Invoke("ShowFindImgHint", delay);
+    }
+
+    public void ShowPage4Info() {
+        FindImgAnimator.gameObject.SetActive(true);
+        FindImgAnimator.Play("4P First");
+    }
+
+    public void ShowPage4Info(float delay) {
+        Invoke("ShowPage4Info", delay);
     }
 
     [ContextMenu("TestHint")]

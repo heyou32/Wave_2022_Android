@@ -11,6 +11,7 @@ public class MainSceneUiManager : MonoBehaviour
     public float uiShowingDuration = 3;
     public float animDuration = 0.7f;
     public OnboardingUIManager onboardingUI;
+    public FadeInOut fadeInOut;
     public ARPlaneManager planeManager;
     public Image[] uiObjects;
     private Coroutine hideTimer;
@@ -40,6 +41,7 @@ public class MainSceneUiManager : MonoBehaviour
     }
 
     public void GoToStartScene() {
+        fadeInOut.FadeOut();
         Invoke("LoadStartScene", 2);
     }
 
