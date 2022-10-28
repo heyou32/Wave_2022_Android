@@ -25,12 +25,7 @@ public class NextPageTimer : MonoBehaviour
     {
         if (!isManual)
         {
-            Invoke("ShowFindNextPageUI", delay);
-
-            if (isPage4)
-                OnboardingUIManager.Instance.ShowPage4Info(delay + findImgDelay);
-            else
-                OnboardingUIManager.Instance.ShowFindImgHint(delay + findImgDelay);
+            StartTimer(delay);
         }
     }
 
@@ -39,9 +34,18 @@ public class NextPageTimer : MonoBehaviour
         CancelInvoke();
     }
 
+    public void StartTimer(float delay) {
+        Invoke("ShowFindNextPageUI", delay);
+
+        if (isPage4)
+            OnboardingUIManager.Instance.ShowPage4Info(delay + findImgDelay);
+        else
+            OnboardingUIManager.Instance.ShowFindImgHint(delay + findImgDelay);
+    }
+
     public void ShowFindNextPageUI()
     {
-        MarkerManager.Instance.currentTargetPageIndex += 1;
+        MarkerManager.Instance.currentTargetPageIndex = MarkerManager.Instance.currentPageIndex + 1;
         nextImage.SetActive(true);
         _vp.time = 0;
         _vp.Play();

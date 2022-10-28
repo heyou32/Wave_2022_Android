@@ -165,6 +165,7 @@ public class OnboardingUIManager : MonoBehaviour
     }
 
     public void ShowFindImgHint(float delay) {
+        CancelInvoke();
         Invoke("ShowFindImgHint", delay);
     }
 
@@ -174,7 +175,16 @@ public class OnboardingUIManager : MonoBehaviour
     }
 
     public void ShowPage4Info(float delay) {
+        CancelInvoke();
         Invoke("ShowPage4Info", delay);
+    }
+
+    public void Show5PBoardEnter() {
+        FindImgAnimator.Play("5P Board Enter");
+    }
+
+    public void Show5PBoardExit() {
+        FindImgAnimator.Play("5P Board Exit");
     }
 
     [ContextMenu("TestHint")]

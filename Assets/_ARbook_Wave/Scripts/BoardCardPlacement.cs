@@ -4,46 +4,28 @@ using UnityEngine;
 
 public class BoardCardPlacement : CardPlacement
 {
+    public PageProgressBar progressBar;
     public GameObject woman;
+    public NextPageTimer nextPageTimer;
     Animator anim;
-
-    public GameObject nextImage;
-    Animator animator;
-
-
-    public GameObject[] arPrefab;
-    public float delay;
 
     public GameObject board;
     private void Start()
     {
-        nextImage.SetActive(true);
-        animator = nextImage.GetComponent<Animator>();
         anim = woman.GetComponent<Animator>();
     }
+
+    protected override void OnEnable() {
+        base.OnEnable();
+        progressBar.SetPause(true);
+    }
+
     protected override void OnCardPlacement()
     {
         base.OnCardPlacement();
-        Debug.Log("Touched");
         anim.SetTrigger("Board");
         board.SetActive(false);
-        Invoke("NextPage", delay);
-    }
-    void NextPage()
-    {
-        nextImage.SetActive(true);
-        animator.SetTrigger("SceneEnd");
-
-        for (int i = 0; i < arPrefab.Length; i++)
-        {
-            arPrefab[i].SetActive(false);
-
-        }
-        Invoke("VideoOff", 4);
-    }
-    void VideoOff()
-    {
-        nextImage.SetActive(false);
-
+        progressBar.SetPause(false);
+        nextPageTimer.StartTimer(25);
     }
 }

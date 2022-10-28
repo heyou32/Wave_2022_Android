@@ -155,9 +155,8 @@ public class MarkerManager : MonoBehaviour
                 if (trackedImg.trackingState == TrackingState.Tracking)
                 {
                     // 현재 타겟페이지가 아니면 무시
-                    if (target.pageOption.pageNumber != -1 && target.pageOption.pageNumber != currentTargetPageIndex) continue;
+                   // if (target.pageOption.pageNumber != -1 && target.pageOption.pageNumber != currentTargetPageIndex) continue;
 
-			print(trackedImg.referenceImage.name);
                     // 페이지가 아닌 오브젝트 또는 고정된 페이지면
                     if (target.pageOption.pageNumber == -1 || target.isFixed)
                     {

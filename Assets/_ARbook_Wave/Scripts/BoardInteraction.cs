@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BoardInteraction : MonoBehaviour
 {
-    public GameObject cardPlacement;
-    BoardCardPlacement boardScript;
+
+    public BoardCardPlacement cardPlacement;
 
     MeshRenderer mesh;
     Animator boardAnim;
@@ -15,8 +15,7 @@ public class BoardInteraction : MonoBehaviour
     public float sceneEndTime = 67;
     private void Start()
     {
-        boardScript = cardPlacement.GetComponent<BoardCardPlacement>();
-        boardScript.enabled = false;
+        cardPlacement.enabled = false;
 
         boardAnim = GetComponent<Animator>();
         mesh = GetComponent<MeshRenderer>();
@@ -30,7 +29,7 @@ public class BoardInteraction : MonoBehaviour
             mesh.enabled = true;
             //boardAnim.SetTrigger("Here");
 
-            boardScript.enabled = true;
+            cardPlacement.enabled = true;
         }
     }
     //private void OnTriggerEnter(Collider other)
