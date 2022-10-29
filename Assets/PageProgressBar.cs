@@ -9,6 +9,7 @@ public class PageProgressBar : MonoBehaviour
     private float _pageLength;
     private float _time;
     private bool _show = false;
+    private bool _isPause = false;
 
     private void Awake() 
     {
@@ -26,6 +27,7 @@ public class PageProgressBar : MonoBehaviour
 
     void Update() {
         if (_show == false) return;
+        if (_isPause) return;
 
         _progressBarCursor.fillAmount = _time / _pageLength;
         _time += Time.deltaTime;
@@ -35,5 +37,9 @@ public class PageProgressBar : MonoBehaviour
             _show = false;
             _cg.alpha = 0;
         }
+    }
+
+    public void SetPause(bool isPause) {
+        _isPause = isPause;
     }
 }
