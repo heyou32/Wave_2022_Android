@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "R3CN60HFWJH",
         "name": "theater.selfportrait.wave",
-        "processId": 18553,
+        "processId": 28142,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -42,6 +42,12 @@
             "deviceId": "R3CN60HFWJH",
             "name": "theater.selfportrait.wave",
             "processId": 18553,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CN60HFWJH",
+            "name": "theater.selfportrait.wave",
+            "processId": 28142,
             "exited": false
         }
     ],
