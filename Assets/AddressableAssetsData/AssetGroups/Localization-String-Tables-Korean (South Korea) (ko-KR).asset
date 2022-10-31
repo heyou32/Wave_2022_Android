@@ -23,6 +23,25 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-ko-KR
     - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 026918824edade640b6935214beccc58
+    m_Address: AboutTable_ko-KR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ko-KR
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3a8c3ef4d7c4ae41a0d9282745599c9
+    m_Address: GuideTable_ko-KR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ko-KR
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5dc60abaf92c0134db8474acbd2c5cc0
+    m_Address: UI_ko-KR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ko-KR
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: c31e781fe2de3c7499964153665455d3, type: 2}
   m_SchemaSet:

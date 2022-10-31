@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: AboutTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: AboutTable
+  m_TableCollectionNameGuidString: 0cc2d7873f52e0240a75de0c70acdbec
+  m_Entries:
+  - m_Id: 91162927104
+    m_Key: "\uD30C\uB3C4\uC5D0 \uB300\uD558\uC5EC \uD0C0\uC774\uD2C0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450522505216
+    m_Key: "\uD30C\uB3C4\uC5D0 \uB300\uD558\uC5EC \uB0B4\uC6A9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 547800997888
+    m_Key: "\uD30C\uB3C4 \uC904\uAC70\uB9AC \uD0C0\uC774\uD2C0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 649357680640
+    m_Key: "\uD30C\uB3C4 \uC904\uAC70\uB9AC \uB0B4\uC6A9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 725987614720
+    m_Key: "Cast \uD0C0\uC774\uD2C0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773261615104
+    m_Key: "Cast \uB0B4\uC6A9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 831050735616
+    m_Key: "Staff \uD0C0\uC774\uD2C0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 877678813184
+    m_Key: "Staff \uB0B4\uC6A9 \uC67C\uCABD"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 964056309760
+    m_Key: "Staff \uB0B4\uC6A9 \uC624\uB978\uCABD"
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1667178929519

@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class PageProgressBar : MonoBehaviour
 {
     public NextPageTimer nextPageTimer;
+    public NextPageTimerLastPage nextPageTimerLastPage;
     private Image _progressBarCursor;
     private CanvasGroup _cg;
     private float _pageLength;
@@ -14,7 +15,12 @@ public class PageProgressBar : MonoBehaviour
     private void Awake() 
     {
         _progressBarCursor = transform.GetChild(0).GetChild(0).GetComponent<Image>();
-        _pageLength = nextPageTimer.delay;
+
+        if (nextPageTimer)
+            _pageLength = nextPageTimer.delay;
+        else if (nextPageTimerLastPage)
+            _pageLength = nextPageTimerLastPage.delay;
+
         _cg = GetComponent<CanvasGroup>();
     }
 
