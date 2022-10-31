@@ -13,7 +13,8 @@ public class MainSceneUiManager : MonoBehaviour
     public OnboardingUIManager onboardingUI;
     public FadeInOut fadeInOut;
     public ARPlaneManager planeManager;
-    public Image[] uiObjects;
+    public List<Image> uiObjects;
+//    public Image[] uiObjects;
     private Coroutine hideTimer;
     private bool isShowing = false;
 
@@ -87,7 +88,7 @@ public class MainSceneUiManager : MonoBehaviour
         SetImagesAlpha(uiObjects, to);
     }
 
-    private void SetImagesAlpha(Image[] images, float alpha) {
+    private void SetImagesAlpha(List<Image> images, float alpha) {
         foreach(var image in images) {
             SetImageAlpha(image, alpha);
         }
