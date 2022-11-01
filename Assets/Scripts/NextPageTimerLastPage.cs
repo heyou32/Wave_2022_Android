@@ -11,13 +11,13 @@ public class NextPageTimerLastPage : NextPageTimer
     public float firstSongTime, secondSongTime;
     public GameObject popUpExit;
 
-    Coroutine coroutine;
+    Coroutine firstCoroutine;
     public PageProgressBar progressBar;
     public MainSceneUiManager uiManager;
     public List<GameObject> addedUIs;
-    private void Start()
+    public Button btnCredit;
+    private void Awake()
     {
-        //endingUI.SetActive(false);
         foreach (GameObject item in addedUIs)
         {
             uiManager.uiObjects.Add(item.GetComponent<Image>());
@@ -25,21 +25,27 @@ public class NextPageTimerLastPage : NextPageTimer
     }
     void OnEnable()
     {
-        coroutine = StartCoroutine(StartTimer(firstSongTime, secondSongTime));
+        btnCredit.onClick.AddListener(SkipToCredit);
+        firstCoroutine = StartCoroutine(StartTimer(firstSongTime, secondSongTime));
+    }
+    void OnDisable()
+    {
+        btnCredit.onClick.RemoveListener(SkipToCredit);
     }
 
 
     IEnumerator StartTimer(float first, float second)
     {
-        Debug.Log($"{coroutine} is started");
+        Debug.Log($"{this.firstCoroutine} is started");
         yield return new WaitForSeconds(first);
         StartCoroutine(Credit(second));
     }
     public void SkipToCredit()
     {
-        StopCoroutine(coroutine);
+        Debug.Log($"stop {this.firstCoroutine}");
+        StopCoroutine(this.firstCoroutine);
         firstSong.Stop();
-        progressBar._time = 180;
+        progressBar._time = firstSongTime;
         StartCoroutine(Credit(secondSongTime));
 
         uiManager.uiObjects.RemoveAt(uiManager.uiObjects.Count - 1);
@@ -47,20 +53,8 @@ public class NextPageTimerLastPage : NextPageTimer
     }
     IEnumerator Credit(float time)
     {
-        Debug.Log("why");
         credit.SetActive(true);
         yield return new WaitForSeconds(time);
         popUpExit.SetActive(true);
     }
-    //public void ShowFindNextPageUI()
-    //{
-    //    vedioManager.SetActive(true);
-    //    credit.SetActive(true);
-    //    Invoke("PopUp", endend);
-    //}
-    //void PopUp()
-    //{
-    //    endingUI.SetActive(true);
-
-    //}
 }

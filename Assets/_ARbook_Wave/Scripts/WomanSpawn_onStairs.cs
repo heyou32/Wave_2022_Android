@@ -10,7 +10,7 @@ public class WomanSpawn_onStairs : MonoBehaviour
     IEnumerator womanCoroution;
 
     float curTime;
-    //[SerializeField]
+    [SerializeField]
     float doorTiming = 82;
 
     AudioSource stairsAudio;
