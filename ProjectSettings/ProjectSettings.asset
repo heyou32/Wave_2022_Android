@@ -210,6 +210,10 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 11400000, guid: a03eb1d801a8b9445bdc4c9c3bd78e3b, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: -8053634793369034596, guid: 58f40b12bbc864f3c96c6505a9a1e1e3, type: 2}
   - {fileID: 0}
   - {fileID: 4800000, guid: c9f956787b1d945e7b36e0516201fc76, type: 3}
@@ -239,7 +243,7 @@ PlayerSettings:
     iPhone: 0
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
-  AndroidBundleVersionCode: 21
+  AndroidBundleVersionCode: 23
   AndroidMinSdkVersion: 24
   AndroidTargetSdkVersion: 31
   AndroidPreferredInstallLocation: 1
