@@ -1,41 +1,66 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class NextPageTimerLastPage : MonoBehaviour
+public class NextPageTimerLastPage : NextPageTimer
+
 {
-    public float delay = 150;
     public GameObject credit;
-    public GameObject vedioManager;
-    public bool isManual = false;
-    public float endend;
-    public GameObject endingUI;
-    private void Awake()
+    public AudioSource firstSong;
+    public float firstSongTime, secondSongTime;
+    public GameObject popUpExit;
+
+    Coroutine coroutine;
+    public PageProgressBar progressBar;
+    public MainSceneUiManager uiManager;
+    public List<GameObject> addedUIs;
+    private void Start()
     {
-        endingUI.SetActive(false);
-    }
-    private void OnEnable()
-    {
-        if (!isManual)
+        //endingUI.SetActive(false);
+        foreach (GameObject item in addedUIs)
         {
-            Invoke("ShowFindNextPageUI", delay);
+            uiManager.uiObjects.Add(item.GetComponent<Image>());
         }
     }
-
-    private void OnDisable()
+    void OnEnable()
     {
-        CancelInvoke();
+        coroutine = StartCoroutine(StartTimer(firstSongTime, secondSongTime));
     }
 
-    public void ShowFindNextPageUI()
+
+    IEnumerator StartTimer(float first, float second)
     {
-        vedioManager.SetActive(true);
+        Debug.Log($"{coroutine} is started");
+        yield return new WaitForSeconds(first);
+        StartCoroutine(Credit(second));
+    }
+    public void SkipToCredit()
+    {
+        StopCoroutine(coroutine);
+        firstSong.Stop();
+        progressBar._time = 180;
+        StartCoroutine(Credit(secondSongTime));
+
+        uiManager.uiObjects.RemoveAt(uiManager.uiObjects.Count - 1);
+        addedUIs[addedUIs.Count - 1].SetActive(false);
+    }
+    IEnumerator Credit(float time)
+    {
+        Debug.Log("why");
         credit.SetActive(true);
-        Invoke("PopUp", endend);
+        yield return new WaitForSeconds(time);
+        popUpExit.SetActive(true);
     }
-    void PopUp()
-    {
-        endingUI.SetActive(true);
+    //public void ShowFindNextPageUI()
+    //{
+    //    vedioManager.SetActive(true);
+    //    credit.SetActive(true);
+    //    Invoke("PopUp", endend);
+    //}
+    //void PopUp()
+    //{
+    //    endingUI.SetActive(true);
 
-    }
+    //}
 }
