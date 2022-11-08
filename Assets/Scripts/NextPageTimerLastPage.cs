@@ -47,14 +47,23 @@ public class NextPageTimerLastPage : NextPageTimer
         firstSong.Stop();
         progressBar._time = firstSongTime;
         StartCoroutine(Credit(secondSongTime));
-
-        uiManager.uiObjects.RemoveAt(uiManager.uiObjects.Count - 1);
-        addedUIs[addedUIs.Count - 1].SetActive(false);
     }
     IEnumerator Credit(float time)
     {
+        uiManager.uiObjects.RemoveAt(uiManager.uiObjects.Count - 1);
+        addedUIs[addedUIs.Count - 1].SetActive(false);
+        EndingCredit ed = credit.GetComponent<EndingCredit>();
+
+        ed.fadeEffect.FadeOut();
+        yield return new WaitForSeconds(2);
+        ed.fadeEffect.FadeIn();
+        
         credit.SetActive(true);
+
+        ed.SetEnableCreditVideo(true);
         yield return new WaitForSeconds(time);
-        popUpExit.SetActive(true);
+        // popUpExit.SetActive(true);
+        ed.SetEnableCreditVideo(false);
+        gameObject.SetActive(false);
     }
 }
