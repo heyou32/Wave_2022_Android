@@ -16,21 +16,22 @@ public class NextPageTimerLastPage : NextPageTimer
     public MainSceneUiManager uiManager;
     public List<GameObject> addedUIs;
     public Button btnCredit;
-    private void Awake()
-    {
-        foreach (GameObject item in addedUIs)
-        {
-            uiManager.uiObjects.Add(item.GetComponent<Image>());
-        }
-    }
+
     void OnEnable()
     {
+        foreach (GameObject item in addedUIs) {
+            uiManager.uiObjects.Add(item.GetComponent<Image>());
+        }
+
         btnCredit.onClick.AddListener(SkipToCredit);
         firstCoroutine = StartCoroutine(StartTimer(firstSongTime, secondSongTime));
     }
     void OnDisable()
     {
         btnCredit.onClick.RemoveListener(SkipToCredit);
+        foreach (GameObject item in addedUIs) {
+            uiManager.uiObjects.Remove(item.GetComponent<Image>());
+        }
     }
 
 
@@ -50,8 +51,8 @@ public class NextPageTimerLastPage : NextPageTimer
     }
     IEnumerator Credit(float time)
     {
-        uiManager.uiObjects.RemoveAt(uiManager.uiObjects.Count - 1);
-        addedUIs[addedUIs.Count - 1].SetActive(false);
+        uiManager.uiObjects.Remove(addedUIs[1].GetComponent<Image>());
+        addedUIs[1].SetActive(false);
         EndingCredit ed = credit.GetComponent<EndingCredit>();
 
         ed.fadeEffect.FadeOut();

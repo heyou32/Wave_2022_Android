@@ -7,7 +7,7 @@ public class BoardInteraction : MonoBehaviour
 
     public BoardCardPlacement cardPlacement;
 
-    MeshRenderer mesh;
+    public MeshRenderer mesh;
     Animator boardAnim;
 
     bool sceneEnd;
@@ -18,12 +18,16 @@ public class BoardInteraction : MonoBehaviour
         cardPlacement.enabled = false;
 
         boardAnim = GetComponent<Animator>();
-        mesh = GetComponent<MeshRenderer>();
-        mesh.enabled = false;
     }
+
+    private void OnEnable() 
+    {
+        mesh.enabled = false;    
+    }
+
     private void Update()
     {
-        if (Timer.instance.sceneTime > sceneEndTime)
+        if (Timer.instance?.sceneTime > sceneEndTime)
         {
             sceneEnd = true;
             mesh.enabled = true;

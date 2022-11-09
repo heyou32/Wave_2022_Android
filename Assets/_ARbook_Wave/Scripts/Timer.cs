@@ -11,6 +11,12 @@ public class Timer : MonoBehaviour
         instance = this;
         sceneTime = 0;
     }
+
+    private void OnEnable() 
+    {
+        sceneTime = 0;    
+    }
+
     void Update()
     {
         sceneTime += Time.deltaTime;

@@ -77,6 +77,18 @@ public class TargetInfo
     public float showInScreenTime;
     public bool isFixed;
     public TrackingState trackingState = TrackingState.None;
+
+    //[HideInInspector]
+    public bool isCoolDown = false;
+
+    public void StartCoolDownTimer(float coolTime) 
+    {
+        isCoolDown = true;
+        MarkerManager.Instance.WaitForSeconds(() => 
+        {
+            isCoolDown = false;
+        }, coolTime);
+    }
 }
 
 public class MarkerManager : MonoBehaviour
@@ -146,6 +158,7 @@ public class MarkerManager : MonoBehaviour
             {
                 // 추적 목록에 포함된 이미지인지 체크
                 if (trackedImg.referenceImage.name != target.name) continue;
+                if (target.isCoolDown) continue;
 
                 target.trackingState = trackedImg.trackingState;
 
@@ -277,7 +290,7 @@ public class MarkerManager : MonoBehaviour
             }
         }
         // Debug.Log("isNextPageAnim: " + isNextPageAnimPlaying());
-        btnPageReplay.SetActive(!isNextPageAnimPlaying() && targetPageInfos.FirstOrDefault(pi => pi.createdObj && pi.createdObj.activeSelf) != null);
+        //btnPageReplay.SetActive(false);
     }
 
     private void CloseOtherPagesIfTargetIsPage(TargetInfo target) {
@@ -364,5 +377,16 @@ public class MarkerManager : MonoBehaviour
         manager.enabled = true;
 
         targetPageInfos.ForEach(pi => pi.showInScreenTime = 0);
+    }
+
+    public void WaitForSeconds(System.Action action, float time)
+    {
+        StartCoroutine(CWaitForSeconds(action, time));
+    }
+
+    private IEnumerator CWaitForSeconds(System.Action action, float time)
+    {
+        yield return new WaitForSeconds(time);
+        action();
     }
 }

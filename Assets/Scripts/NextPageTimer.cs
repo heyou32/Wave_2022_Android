@@ -55,6 +55,7 @@ public class NextPageTimer : MonoBehaviour
 
     void AROff()
     {
+        MarkerManager.Instance.targetPageInfos[MarkerManager.Instance.currentPageIndex - 1].StartCoolDownTimer(10);
         for (int i = 0; i < arPrefab.Length; i++)
         {
             arPrefab[i].SetActive(false);

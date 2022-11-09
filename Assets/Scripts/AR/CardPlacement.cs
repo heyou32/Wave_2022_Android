@@ -22,6 +22,11 @@ public class CardPlacement : MonoBehaviour
         points = transform.GetComponentsInChildren<Transform>().Where(t => t.gameObject.name.Contains("Point")).ToArray();
     }
 
+    private void OnDisable() 
+    {
+        isCorrect = false;    
+    }
+
     private void Update() {
         CheckIsCorrect();
     }
