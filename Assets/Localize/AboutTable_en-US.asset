@@ -26,5 +26,53 @@ MonoBehaviour:
     m_Localized: STAFF
     m_Metadata:
       m_Items: []
+  - m_Id: 91162927104
+    m_Localized: About The Waves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450522505216
+    m_Localized: '    In the augmented reality pop-up book The Waves: Shattering
+      Blue Nights, a brand new space opens up as you flip the page. The big blue
+      waves seeped into the page feel fantastically melancholic yet the story it
+      carries leaves spots of tenderness in mind. I hope The Waves can bring comfort
+      to those who, like Celeste, are experiencing the weight of  apathy and depression.
+      I hope  that  we can get through the hard times together.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 547800997888
+    m_Localized: 'The Waves: Shattering Blue Nights synopsis'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 649357680640
+    m_Localized: "    There is a woman lying on her bed. Days and nights pass as
+      she lies on her bed. One dark night, her bed starts to drift away to the ocean.
+      She is alone in the ocean. Right before she gets swept away by a big tide,
+      she wakes up and saves herself. The ocean calms down. Her bed arrives on a
+      small island. There she finds a labyrinth with many stairs. When she manages
+      to get out of the labyrinth, she finds other beds left on the shore. She wonders
+      to herself, \u201Cwhere are all these floating bed frames coming from?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773261615104
+    m_Localized: 'Celeste       Claire Saxe
+
+      Man             Kevin Michael
+      Wesson
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 877678813184
+    m_Localized: "Writer/Illustrator\nPop-up Book Editor\nComposer\nAudio Engineering\nDramaturgy/Translation\r\nTranslation
+      Editor\nAndroid AR App Development\r\t\niOS App Development\nProject Manager\nProducer\nProject
+      Director\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 964056309760
+    m_Localized: "Jaerin Son \r\nHewon Park\r\nHeenam Son, ohmbre \r\nNick Zoulek\nJihye
+      Kim \r\nDylan Fahoome \r\nJain Lee, Hyerin Jeon, Minwoo Song\nPLAYLINK\r\nJungsuh
+      Lim \r\nJihyun Ha\r\nJaerin Son\r\n"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

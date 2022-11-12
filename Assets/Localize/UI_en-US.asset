@@ -26,5 +26,38 @@ MonoBehaviour:
     m_Localized: NO
     m_Metadata:
       m_Items: []
+  - m_Id: 6777724928
+    m_Localized: 'Would you like to end The Waves: Shattering Blue Nights?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 449524260864
+    m_Localized: Please find the following image on the page.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378879914795008
+    m_Localized: "Click this if you\u2019re having trouble."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398181011283968
+    m_Localized: Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 810544783360
+    m_Localized: Could you hand the surfboard to Celeste?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1270353747968
+    m_Localized: DONE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1583701811200
+    m_Localized: Would you like to back to the title?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1186421530624
+    m_Localized: "Place the book on a fully lit surface. \nSlowly move the camera
+      around the book\nso the edges of the book are recognized on the app."
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
