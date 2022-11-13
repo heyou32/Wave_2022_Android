@@ -59,5 +59,9 @@ MonoBehaviour:
       around the book\nso the edges of the book are recognized on the app."
     m_Metadata:
       m_Items: []
+  - m_Id: 772288536576
+    m_Localized: "Rotate the book 90\xB0 and set it up as follows"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -36,7 +36,9 @@ MonoBehaviour:
       waves seeped into the page feel fantastically melancholic yet the story it
       carries leaves spots of tenderness in mind. I hope The Waves can bring comfort
       to those who, like Celeste, are experiencing the weight of  apathy and depression.
-      I hope  that  we can get through the hard times together.'
+      I hope  that  we can get through the hard times together.
+
+'
     m_Metadata:
       m_Items: []
   - m_Id: 547800997888
@@ -50,7 +52,7 @@ MonoBehaviour:
       she wakes up and saves herself. The ocean calms down. Her bed arrives on a
       small island. There she finds a labyrinth with many stairs. When she manages
       to get out of the labyrinth, she finds other beds left on the shore. She wonders
-      to herself, \u201Cwhere are all these floating bed frames coming from?"
+      to herself, \u201Cwhere are all these floating bed frames coming from?\n"
     m_Metadata:
       m_Items: []
   - m_Id: 773261615104

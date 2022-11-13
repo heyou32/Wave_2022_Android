@@ -23,18 +23,18 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1121137188864
-    m_Localized: '*Even when there is no activity going on, use the camera to find
-      and recognize images on the page.'
+    m_Localized: "\xB7 Even when there is no activity going on, \n  use the camera
+      to find and recognize \n  images on the page.\n"
     m_Metadata:
       m_Items: []
   - m_Id: 16369080590336
     m_Localized: "1. We recommend using the app in a fully lit space. \r\n2. Place
       the camera in front of each page. \n    Once the app recognizes the current
-      page, \n    move  your device around to explore the world of The Waves.\r\n3.
-      Find each image on the page and place it directly in front of  the camera.
-      \r\n4. If you are having trouble, remove the camera and try again. \r\n5. For
-      Celeste\u2019s surfboard and dolphin: place the images directly \n    in front
-      of the camera and move your device  around. \r\n"
+      page, \n    move  your device around to \n    explore the world of The Waves.\r\n3.
+      Find each image on the page and place it directly \n    in front of  the camera.
+      \r\n4. If you are having trouble, remove the camera \n    and try again. \r\n5.
+      For Celeste\u2019s surfboard and dolphin: \n    place the images directly in
+      front of the camera \n    and move your device  around. \r\n"
     m_Metadata:
       m_Items: []
   references:
