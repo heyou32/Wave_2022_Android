@@ -23,7 +23,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1121137188864
-    m_Localized: "\xB7 Even when there is no activity going on, "
+    m_Localized: "\xB7 Even when there is no activity going on,\n  use the camera
+      to find and recognize\n  images on the page."
     m_Metadata:
       m_Items: []
   - m_Id: 16369080590336
@@ -34,14 +35,6 @@ MonoBehaviour:
       \r\n4. If you are having trouble, remove the camera and try again. \r\n5. For
       Celeste\u2019s surfboard and dolphin: \n    place the images directly in front
       of the camera \n    and move your device  around. \r\n"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 5127299816742912
-    m_Localized: '  use the camera to find and recognize images on the page.'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 5130199930494976
-    m_Localized: Even when there is no activity going on
     m_Metadata:
       m_Items: []
   references:
