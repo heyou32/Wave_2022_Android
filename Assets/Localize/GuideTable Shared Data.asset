@@ -27,6 +27,14 @@ MonoBehaviour:
     m_Key: "\uAD00\uB78C \uAC00\uC774\uB4DC \uB0B4\uC6A9"
     m_Metadata:
       m_Items: []
+  - m_Id: 5127299816742912
+    m_Key: "\uC601\uC0C1\uC774 \uBCF4\uC774\uC9C0 \uC54A\uC744 \uB54C \uCC3E\uC544\uC8FC\uC138\uC694_\uBCF8\uBB38"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5130199930494976
+    m_Key: "\uC601\uC0C1\uC774 \uBCF4\uC774\uC9C0 \uC54A\uC744 \uB54C \uCC3E\uC544\uC8FC\uC138\uC694_AR\uC52C"
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
