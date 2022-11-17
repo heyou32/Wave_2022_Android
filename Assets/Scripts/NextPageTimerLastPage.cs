@@ -21,10 +21,11 @@ public class NextPageTimerLastPage : NextPageTimer
     public List<GameObject> addedUIs;
     public Button btnCredit;
     public Button btnSecond;
+    public Button btnReplay;
 
     private void Start()
     {
-        secondSong = GetComponent<AudioSource>();
+        //secondSong = credit.GetComponent<AudioSource>();
         btnCredit.onClick.AddListener(SkipToCredit);
         btnSecond.onClick.AddListener(SkipToSencond);
     }
@@ -33,7 +34,7 @@ public class NextPageTimerLastPage : NextPageTimer
         foreach (GameObject item in addedUIs)
         {
             uiManager.uiObjects.Add(item.GetComponent<Image>());
-           // item.SetActive(true);
+            // item.SetActive(true);
         }
         coroutine = StartCoroutine(StartTimer(firstSongTime, secondSongTime));
     }
@@ -90,6 +91,8 @@ public class NextPageTimerLastPage : NextPageTimer
         addedUIs[1].SetActive(false);
         uiManager.uiObjects.Remove(addedUIs[2].GetComponent<Image>());
         addedUIs[2].SetActive(false);
+        uiManager.uiObjects.Remove(btnReplay.GetComponent<Image>());    // replay button
+        btnReplay.gameObject.SetActive(false);
 
         EndingCredit ed = credit.GetComponent<EndingCredit>();
 
