@@ -37,6 +37,8 @@ public class NextPageTimerLastPage : NextPageTimer
             // item.SetActive(true);
         }
         coroutine = StartCoroutine(StartTimer(firstSongTime, secondSongTime));
+
+        //if (secondSong.isPlaying) secondSong.Stop();
     }
     void OnDisable()
     {
@@ -45,6 +47,7 @@ public class NextPageTimerLastPage : NextPageTimer
             uiManager.uiObjects.Remove(item.GetComponent<Image>());
             item.SetActive(false);
         }
+        if (secondSong.isPlaying) secondSong.Stop();
     }
 
 

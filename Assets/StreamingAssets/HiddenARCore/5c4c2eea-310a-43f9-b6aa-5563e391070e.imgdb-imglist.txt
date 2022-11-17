@@ -1,9 +1,0 @@
-4ebdf4d9bd59434c8727f97b1e7a2a69|C:\Users\YOU\Desktop\GitHub\Wave_2022_Android\Assets\_ARbook_Wave\XR\WaveLibrary\Test1p.jpg|0.1
-09c3678d9ce54ed8a7e0f4f59bb8b5e1|C:\Users\YOU\Desktop\GitHub\Wave_2022_Android\Assets\_ARbook_Wave\XR\WaveLibrary\Test2p.jpg|0.1
-38d59a705ee345dfa2bed18241101fcd|C:\Users\YOU\Desktop\GitHub\Wave_2022_Android\Assets\_ARbook_Wave\XR\WaveLibrary\Test3p.jpg|0.1
-86ea78e25ebf4548bd936834613713d4|C:\Users\YOU\Desktop\GitHub\Wave_2022_Android\Assets\_ARbook_Wave\XR\WaveLibrary\Test4p.jpg|0.09
-e013788490c8483f84212c2a45514610|C:\Users\YOU\Desktop\GitHub\Wave_2022_Android\Assets\_ARbook_Wave\XR\ImageLibraryComplete\4P_Door.jpg|0.058
-bda4745e44484837a7ef255c7265bcf7|C:\Users\YOU\Desktop\GitHub\Wave_2022_Android\Assets\_ARbook_Wave\XR\WaveLibrary\Test5p.png|0.06
-8908c5145ec54a87a2947dcd36831538|C:\Users\YOU\Desktop\GitHub\Wave_2022_Android\Assets\_ARbook_Wave\XR\WaveLibrary\Test5p_Board.png|0.05
-1e0636efae2b462783064544cbb65bca|C:\Users\YOU\Desktop\GitHub\Wave_2022_Android\Assets\_ARbook_Wave\XR\WaveLibrary\Test6p.jpg|0.12
-0238ee2d113c464ebf01a09a11fe1ca3|C:\Users\YOU\Desktop\GitHub\Wave_2022_Android\Assets\_ARbook_Wave\XR\WaveLibrary\Test6p_Dolphin.png|0.12
