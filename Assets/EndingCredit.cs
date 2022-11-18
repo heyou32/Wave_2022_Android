@@ -8,15 +8,13 @@ public class EndingCredit : MonoBehaviour
 {
     public FadeInOut fadeEffect;
 
-    private VideoPlayer _videoPlayer;
+    private CachedVideoPlayer _videoPlayer;
     private AudioSource _audioPlayer;
-    private RawImage _rawImage;
 
     private void Awake() 
     {
-        _videoPlayer = gameObject.GetComponent<VideoPlayer>();
+        _videoPlayer = gameObject.GetComponent<CachedVideoPlayer>();
         _audioPlayer = gameObject.GetComponent<AudioSource>();
-        _rawImage = gameObject.GetComponent<RawImage>();
     }
 
     private void OnEnable() 
@@ -33,7 +31,7 @@ public class EndingCredit : MonoBehaviour
         fadeEffect.FadeOut();
 
         yield return new WaitForSeconds(2);
-        _videoPlayer.enabled = true;
+        _videoPlayer.Play();
 
         fadeEffect.FadeIn();
 
@@ -42,11 +40,9 @@ public class EndingCredit : MonoBehaviour
 
     public void SetEnableCreditVideo(bool isEnable) 
     {
-        if (isEnable) 
-        {
-            _videoPlayer.targetTexture.Release();
-        }
-        _rawImage.enabled = isEnable;
-        _videoPlayer.enabled = isEnable;
+        if (isEnable)
+            _videoPlayer.Play();
+        else
+            _videoPlayer.Stop();
     }
 }
