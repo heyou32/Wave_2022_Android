@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "R3CN60HFWJH",
+    "m_SelectedDeviceId": "RFCM908DCXD",
     "m_SelectedPackage": {
-        "deviceId": "R3CN60HFWJH",
+        "deviceId": "RFCM908DCXD",
         "name": "theater.selfportrait.wave",
-        "processId": 16727,
+        "processId": 2145,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -108,6 +108,12 @@
             "deviceId": "RFCM908DCXD",
             "name": "theater.selfportrait.wave",
             "processId": 28498,
+            "exited": false
+        },
+        {
+            "deviceId": "RFCM908DCXD",
+            "name": "theater.selfportrait.wave",
+            "processId": 2145,
             "exited": false
         }
     ],
