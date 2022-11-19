@@ -1,119 +1,119 @@
 {
-    "m_SelectedDeviceId": "R3CN60HFWJH",
+    "m_SelectedDeviceId": "RFCM908DCXD",
     "m_SelectedPackage": {
-        "deviceId": "R3CN60HFWJH",
+        "deviceId": "RFCM908DCXD",
         "name": "theater.selfportrait.wave",
-        "processId": 14948,
+        "processId": 2145,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "R3CN60HFWJH",
-            "name": "com.sec.android.app.launcher",
-            "processId": 3374,
-            "exited": false
-        },
-        {
-            "deviceId": "R3CN60HFWJH",
-            "name": "theater.selfportrait.wave",
-            "processId": 10153,
-            "exited": false
-        },
-        {
-            "deviceId": "R3CN60HFWJH",
-            "name": "theater.selfportrait.wave",
-            "processId": 11451,
-            "exited": false
-        },
-        {
-            "deviceId": "R3CN60HFWJH",
-            "name": "theater.selfportrait.wave",
-            "processId": 12314,
-            "exited": false
-        },
-        {
-            "deviceId": "R3CN60HFWJH",
-            "name": "theater.selfportrait.wave",
-            "processId": 15518,
-            "exited": false
-        },
-        {
-            "deviceId": "R3CN60HFWJH",
-            "name": "theater.selfportrait.wave",
-            "processId": 18553,
-            "exited": false
-        },
-        {
-            "deviceId": "R3CN60HFWJH",
-            "name": "theater.selfportrait.wave",
-            "processId": 28142,
-            "exited": false
-        },
-        {
-            "deviceId": "R3CN60HFWJH",
-            "name": "theater.selfportrait.wave",
-            "processId": 28589,
-            "exited": false
-        },
-        {
-            "deviceId": "R3CN60HFWJH",
-            "name": "theater.selfportrait.wave",
-            "processId": 8025,
-            "exited": false
-        },
-        {
-            "deviceId": "R3CN60HFWJH",
-            "name": "theater.selfportrait.wave",
-            "processId": 10808,
-            "exited": false
-        },
-        {
-            "deviceId": "R3CN60HFWJH",
-            "name": "theater.selfportrait.wave",
-            "processId": 17256,
-            "exited": false
-        },
-        {
-            "deviceId": "R3CN60HFWJH",
-            "name": "theater.selfportrait.wave",
-            "processId": 20057,
-            "exited": false
-        },
-        {
-            "deviceId": "R3CN60HFWJH",
-            "name": "theater.selfportrait.wave",
-            "processId": 9005,
-            "exited": false
-        },
-        {
-            "deviceId": "R3CN60HFWJH",
-            "name": "theater.selfportrait.wave",
-            "processId": 12128,
-            "exited": false
-        },
-        {
-            "deviceId": "R3CN60HFWJH",
-            "name": "theater.selfportrait.wave",
-            "processId": 15771,
-            "exited": false
-        },
-        {
-            "deviceId": "R3CN60HFWJH",
             "name": "theater.selfportrait.wave",
             "processId": 21580,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "R3CN60HFWJH",
             "name": "theater.selfportrait.wave",
             "processId": 8267,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "R3CN60HFWJH",
             "name": "theater.selfportrait.wave",
             "processId": 14948,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CN60HFWJH",
+            "name": "com.sec.android.app.sbrowser",
+            "processId": 959,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CN60HFWJH",
+            "name": "com.sec.android.app.launcher",
+            "processId": 2936,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CN60HFWJH",
+            "name": "com.google.android.youtube",
+            "processId": 26299,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CN60HFWJH",
+            "name": "theater.selfportrait.wave",
+            "processId": 22850,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CN60HFWJH",
+            "name": "theater.selfportrait.waveARCompanion",
+            "processId": 26963,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CN60HFWJH",
+            "name": "com.kakao.talk",
+            "processId": 6777,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CN60HFWJH",
+            "name": "theater.selfportrait.wave",
+            "processId": 11814,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CN60HFWJH",
+            "name": "theater.selfportrait.wave",
+            "processId": 14445,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CN60HFWJH",
+            "name": "theater.selfportrait.wave",
+            "processId": 18305,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CN60HFWJH",
+            "name": "theater.selfportrait.wave",
+            "processId": 32503,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CN60HFWJH",
+            "name": "theater.selfportrait.wave",
+            "processId": 6069,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CN60HFWJH",
+            "name": "theater.selfportrait.wave",
+            "processId": 16727,
+            "exited": false
+        },
+        {
+            "deviceId": "RFCM908DCXD",
+            "name": "com.playrix.zoo_m3.gplay",
+            "processId": 13969,
+            "exited": false
+        },
+        {
+            "deviceId": "RFCM908DCXD",
+            "name": "theater.selfportrait.wave",
+            "processId": 28498,
+            "exited": false
+        },
+        {
+            "deviceId": "RFCM908DCXD",
+            "name": "theater.selfportrait.wave",
+            "processId": 2145,
             "exited": false
         }
     ],

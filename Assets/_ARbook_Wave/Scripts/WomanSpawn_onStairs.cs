@@ -14,7 +14,7 @@ public class WomanSpawn_onStairs : MonoBehaviour
     float doorTiming = 82;
 
     AudioSource stairsAudio;
-    void Start()
+    void OnEnable()
     {
         stairsAudio = GetComponent<AudioSource>();
 
@@ -22,6 +22,7 @@ public class WomanSpawn_onStairs : MonoBehaviour
 
         womanCoroution = WomanSawanAgain();
         StartCoroutine(womanCoroution);
+        curTime = 0;
     }
     private void Update()
     {

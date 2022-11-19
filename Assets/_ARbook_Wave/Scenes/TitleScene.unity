@@ -1649,6 +1649,7 @@ GameObject:
   - component: {fileID: 303674546}
   - component: {fileID: 303674545}
   - component: {fileID: 303674544}
+  - component: {fileID: 303674543}
   m_Layer: 5
   m_Name: Button_About
   m_TagString: Untagged
@@ -1676,6 +1677,20 @@ RectTransform:
   m_AnchoredPosition: {x: 75, y: -75}
   m_SizeDelta: {x: 350, y: 125}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &303674543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303674541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c5c9f894e8ada429ee39480d0fedd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 5860088860561867919}
+  other: {fileID: 1171293352}
 --- !u!114 &303674544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1720,41 +1735,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5860088860561867919}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 303674543}
+        m_TargetAssemblyTypeName: TitlePopupButton, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 5640968795547028258}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Open
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1171293354}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Close
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &303674545
 MonoBehaviour:
@@ -3404,6 +3395,7 @@ GameObject:
   - component: {fileID: 720412967}
   - component: {fileID: 720412966}
   - component: {fileID: 720412965}
+  - component: {fileID: 720412964}
   m_Layer: 5
   m_Name: Button_Guide
   m_TagString: Untagged
@@ -3431,6 +3423,20 @@ RectTransform:
   m_AnchoredPosition: {x: 75, y: -275}
   m_SizeDelta: {x: 350, y: 125}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &720412964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720412962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c5c9f894e8ada429ee39480d0fedd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1171293352}
+  other: {fileID: 5860088860561867919}
 --- !u!114 &720412965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3475,41 +3481,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1171293352}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 720412964}
+        m_TargetAssemblyTypeName: TitlePopupButton, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1171293354}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Open
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 5640968795547028258}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Close
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &720412966
 MonoBehaviour:

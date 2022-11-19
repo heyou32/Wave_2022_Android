@@ -12,20 +12,11 @@ public class NextPageTimer : MonoBehaviour
 
     public GameObject[] arPrefab;
 
-    private VideoPlayer _vp;
-
-
-    private void Awake()
-    {
-        _vp = nextImage.GetComponent<VideoPlayer>();
-        if(_vp)
-        _vp.loopPointReached += VideoOff;
-    }
     private void OnEnable()
     {
         if (!isManual)
         {
-            StartTimer(delay);
+            Invoke("ShowFindNextPageUI", delay);
         }
     }
 
@@ -36,19 +27,17 @@ public class NextPageTimer : MonoBehaviour
 
     public void StartTimer(float delay) {
         Invoke("ShowFindNextPageUI", delay);
-
-        if (isPage4)
-            OnboardingUIManager.Instance.ShowPage4Info(delay + findImgDelay);
-        else
-            OnboardingUIManager.Instance.ShowFindImgHint(delay + findImgDelay);
     }
 
     public void ShowFindNextPageUI()
     {
         MarkerManager.Instance.currentTargetPageIndex = MarkerManager.Instance.currentPageIndex + 1;
         nextImage.SetActive(true);
-        _vp.time = 0;
-        _vp.Play();
+
+        if (isPage4)
+            OnboardingUIManager.Instance.ShowPage4Info(findImgDelay);
+        else
+            OnboardingUIManager.Instance.ShowFindImgHint(findImgDelay);
 
         Invoke("AROff", 1f);
     }
@@ -60,10 +49,5 @@ public class NextPageTimer : MonoBehaviour
         {
             arPrefab[i].SetActive(false);
         }
-
-    }
-    void VideoOff(VideoPlayer vp)
-    {
-        nextImage.SetActive(false);
     }
 }
