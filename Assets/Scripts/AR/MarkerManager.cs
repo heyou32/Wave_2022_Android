@@ -223,10 +223,6 @@ public class MarkerManager : MonoBehaviour
 
                             anim.StartAnim(target.appearAnimation);
                         }
-
-                        float moveDistance = Vector3.Distance(target.createdObj.transform.position, trackedImg.transform.position);
-                        if (moveDistance > 0.05f)
-                                UpdateTrackedObjTransform(target, trackedImg);
                     }
 
                     // 마커가 고정되지 않았으면
@@ -235,30 +231,31 @@ public class MarkerManager : MonoBehaviour
                         // 오브젝트가 나타나있는 상태면
                         if (target.createdObj != null)
                         {
-                            float moveDistance = Vector3.Distance(target.createdObj.transform.position, trackedImg.transform.position);
+                            UpdateTrackedObjTransform(target, trackedImg);
+                            //float moveDistance = Vector3.Distance(target.createdObj.transform.position, trackedImg.transform.position);
 
-                            // 일정거리 이하에서는 오브젝트가 부드럽게 마커를 따라가게 해서 오브젝트가 떨리는 증상을 방지
-                            if (moveDistance <= 0.1f)
-                            {
-                                target.createdObj.transform.position = Vector3.SmoothDamp(
-                                    target.createdObj.transform.position,
-                                    trackedImg.transform.position,
-                                    ref target.positionVelocity,
-                                    smoothTime
-                                );
-                            }
-                            else
-                            {
-                                target.createdObj.transform.position = trackedImg.transform.position;
-                            }
+                            //// 일정거리 이하에서는 오브젝트가 부드럽게 마커를 따라가게 해서 오브젝트가 떨리는 증상을 방지
+                            //if (moveDistance <= 0.1f)
+                            //{
+                            //    target.createdObj.transform.position = Vector3.SmoothDamp(
+                            //        target.createdObj.transform.position,
+                            //        trackedImg.transform.position,
+                            //        ref target.positionVelocity,
+                            //        smoothTime
+                            //    );
+                            //}
+                            //else
+                            //{
+                            //    target.createdObj.transform.position = trackedImg.transform.position;
+                            //}
 
-                            // 오브젝트 회전 부드럽게
-                            target.createdObj.transform.rotation = QuaternionUtil.SmoothDamp(
-                                target.createdObj.transform.rotation,
-                                trackedImg.transform.rotation,
-                                ref target.rotationVelocity,
-                                smoothTime
-                            );
+                            //// 오브젝트 회전 부드럽게
+                            //target.createdObj.transform.rotation = QuaternionUtil.SmoothDamp(
+                            //    target.createdObj.transform.rotation,
+                            //    trackedImg.transform.rotation,
+                            //    ref target.rotationVelocity,
+                            //    smoothTime
+                            //);
                         }
 
                         // 페이지 마커이거나 오브젝트가 마커를 따라다니지 않아도 되는 경우 처리

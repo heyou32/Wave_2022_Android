@@ -63,6 +63,7 @@ public class CardPlacement : MonoBehaviour
         }
 
         foreach (GameObject target in targetList) {
+            if (!target.activeSelf) continue;
             if (PolyUtil.IsPointInPolygon(GetScreenPoint(target.transform.position), vertices)) {
                 placedCardDirection = GetCardDirection(target.transform.forward);
                 return target;

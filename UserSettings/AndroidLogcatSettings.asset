@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "192.168.0.8:5555",
         "name": "theater.selfportrait.wave",
-        "processId": 12977,
+        "processId": 10789,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -144,6 +144,12 @@
             "deviceId": "192.168.0.8:5555",
             "name": "theater.selfportrait.wave",
             "processId": 12977,
+            "exited": false
+        },
+        {
+            "deviceId": "192.168.0.8:5555",
+            "name": "theater.selfportrait.wave",
+            "processId": 10789,
             "exited": false
         }
     ],
