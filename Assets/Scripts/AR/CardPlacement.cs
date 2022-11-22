@@ -37,11 +37,9 @@ public class CardPlacement : MonoBehaviour
 
             if (currentInnerObj && currentInnerObj == prevInnerObj) {
                 currentTime += Time.deltaTime;
-            } else {
-                currentTime = Mathf.Clamp(currentTime - Time.deltaTime, 0, float.MaxValue);
             }
 
-            if (currentTime >= thresholdTime) {
+            if (currentTime > thresholdTime) {
                 isCorrect = true;
                 OnCardPlacement();
             }

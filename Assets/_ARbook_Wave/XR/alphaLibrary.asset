@@ -42,7 +42,7 @@ MonoBehaviour:
       m_GuidLow: 9864203933283230265
       m_GuidHigh: 18020174726187229304
     m_Size: {x: 0.1, y: 0.1}
-    m_SpecifySize: 0
+    m_SpecifySize: 1
     m_Name: 3P
     m_Texture: {fileID: 2800000, guid: eb5ba239b13688e478a0dc40708514fa, type: 3}
   - m_SerializedGuid:
