@@ -29,6 +29,8 @@ public class MainSceneUiManager : MonoBehaviour
     }
 
     public void OnClickScreen() {
+        MarkerManager.Instance.RequestFixCurrentPage();
+
         if (!isShowing) {
             isShowing = true;
             SetActiveAllBtn(true);
@@ -37,6 +39,7 @@ public class MainSceneUiManager : MonoBehaviour
 
         if (hideTimer != null) {
             StopCoroutine(hideTimer);
+            SetImagesAlpha(uiObjects, 1);
         }
         hideTimer = StartCoroutine(IeStartHideTimer(uiShowingDuration));
     }

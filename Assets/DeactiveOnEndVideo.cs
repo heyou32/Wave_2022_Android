@@ -7,7 +7,7 @@ public class DeactiveOnEndVideo : MonoBehaviour
 {
     private CachedVideoPlayer vp;
 
-    void Awake()
+    private void Start() 
     {
         vp = GetComponent<CachedVideoPlayer>();
         vp.cache.loopPointReached += EndReached;

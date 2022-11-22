@@ -109,7 +109,9 @@ public class NextPageTimerLastPage : NextPageTimer
         yield return new WaitForSeconds(time);
         // popUpExit.SetActive(true);
         ed.SetEnableCreditVideo(false);
-        MarkerManager.Instance.targetPageInfos[MarkerManager.Instance.currentPageIndex - 1].StartCoolDownTimer(10);
+        credit.SetActive(false);
+
+        MarkerManager.Instance.targetPageInfos[5].StartCoolDownTimer(10);
         gameObject.SetActive(false);
     }
 }

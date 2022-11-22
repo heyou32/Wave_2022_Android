@@ -21,7 +21,6 @@ public class BoardCardPlacement : CardPlacement
         isCorrect = false;
         progressBar.SetPause(true);
         board.SetActive(true);
-        board.transform.GetChild(0).gameObject.SetActive(true);
     }
 
     protected override void OnCardPlacement()
@@ -29,7 +28,6 @@ public class BoardCardPlacement : CardPlacement
         base.OnCardPlacement();
         anim.SetTrigger("Board");
         board.SetActive(false);
-        board.transform.GetChild(0).gameObject.SetActive(false);
         progressBar.SetPause(false);
         nextPageTimer.StartTimer(25);
     }

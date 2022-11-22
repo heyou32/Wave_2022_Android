@@ -81,6 +81,9 @@ public class TargetInfo
     //[HideInInspector]
     public bool isCoolDown = false;
 
+    [HideInInspector]
+    public bool shouldFix;
+
     public void StartCoolDownTimer(float coolTime) 
     {
         isCoolDown = true;
@@ -112,6 +115,8 @@ public class MarkerManager : MonoBehaviour
     [HideInInspector]
     public int currentPageIndex = -1;
     private Camera mainCam;
+
+    public TargetInfo currentPage;
 
     private void Awake()
     {
@@ -150,6 +155,26 @@ public class MarkerManager : MonoBehaviour
         // currentTrackingTargets.Add(targetPageInfos[currentPageIndex]);
     }
 
+    public void Update() 
+    {
+#if UNITY_EDITOR
+#else
+        if (Input.touchCount == 4)
+            Time.timeScale = 20;
+        else if (Input.touchCount < 4 && Time.timeScale != 1)
+            Time.timeScale = 1;
+#endif
+    }
+
+    // 
+    private void UpdateTrackedObjTransform(TargetInfo target, ARTrackedImage trackedImg) 
+    {
+        target.createdObj.transform.parent = trackedImg.transform;
+        target.createdObj.transform.localPosition = Vector3.zero;
+        target.createdObj.transform.localEulerAngles = Vector3.zero;
+        target.createdObj.transform.parent = null;
+    }
+
     private void OnTrackedImagesChaged(ARTrackedImagesChangedEventArgs args)
     {
         foreach (ARTrackedImage trackedImg in args.updated)
@@ -167,9 +192,6 @@ public class MarkerManager : MonoBehaviour
                 // 화면에 이미지가 보이는 경우
                 if (trackedImg.trackingState == TrackingState.Tracking)
                 {
-                    // 현재 타겟페이지가 아니면 무시
-                   // if (target.pageOption.pageNumber != -1 && target.pageOption.pageNumber != currentTargetPageIndex) continue;
-
                     // 페이지가 아닌 오브젝트 또는 고정된 페이지면
                     if (target.pageOption.pageNumber == -1 || target.isFixed)
                     {
@@ -178,13 +200,19 @@ public class MarkerManager : MonoBehaviour
                         if (!target.createdObj.activeSelf)
                         {
                             shouldPlayAnim = target.appearAnimation != ArAnimationType.NONE;
-                            target.createdObj.transform.parent = trackedImg.transform;
-                            target.createdObj.transform.localPosition = Vector3.zero;
-                            target.createdObj.transform.localEulerAngles = Vector3.zero;
-                            target.createdObj.transform.parent = null;
+                            UpdateTrackedObjTransform(target, trackedImg);
                             target.createdObj.SetActive(true);
+                            Debug.Log(target.name);
 
-			    CloseOtherPagesIfTargetIsPage(target);
+			                CloseOtherPagesIfTargetIsPage(target);
+                        }
+                        else 
+                        {
+                            if (target.shouldFix) 
+                            {
+                                    UpdateTrackedObjTransform(target, trackedImg);
+                                    target.shouldFix = false;
+                            }
                         }
 
                         // appear/disappear 애니메이션 재생처리
@@ -195,6 +223,10 @@ public class MarkerManager : MonoBehaviour
 
                             anim.StartAnim(target.appearAnimation);
                         }
+
+                        float moveDistance = Vector3.Distance(target.createdObj.transform.position, trackedImg.transform.position);
+                        if (moveDistance > 0.05f)
+                                UpdateTrackedObjTransform(target, trackedImg);
                     }
 
                     // 마커가 고정되지 않았으면
@@ -245,7 +277,7 @@ public class MarkerManager : MonoBehaviour
                             if (!target.isFixed && target.showInScreenTime > fixedTimeThreshold)
                             {
                                 target.isFixed = true;
-				CloseOtherPagesIfTargetIsPage(target);
+				                CloseOtherPagesIfTargetIsPage(target);
                             }
                         }
                     }
@@ -291,6 +323,11 @@ public class MarkerManager : MonoBehaviour
         }
         // Debug.Log("isNextPageAnim: " + isNextPageAnimPlaying());
         //btnPageReplay.SetActive(false);
+    }
+
+    public void RequestFixCurrentPage()
+    {
+        targetPageInfos.ForEach(p => p.shouldFix = true);
     }
 
     private void CloseOtherPagesIfTargetIsPage(TargetInfo target) {
@@ -358,6 +395,8 @@ public class MarkerManager : MonoBehaviour
 
     private void CleanImageTrackingObj(TargetInfo target)
     {
+        if (!target.createdObj.activeSelf) return;
+
         target.createdObj.SetActive(false);
     }
 
