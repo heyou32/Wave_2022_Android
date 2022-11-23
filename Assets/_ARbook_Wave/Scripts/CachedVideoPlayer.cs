@@ -14,7 +14,7 @@ public class CachedVideoPlayer : MonoBehaviour
     public VideoAudioOutputMode audioOutputMode = VideoAudioOutputMode.None;
     public VideoPlayer cache;
 
-    private void Awake() 
+    private void Start() 
     {
         cache = VideoManager.Instance.GetCachedPlayer(clip);
         cache.aspectRatio = aspectRatio;

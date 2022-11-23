@@ -12,7 +12,8 @@ public class ParticleWave : MonoBehaviour
     void Start()
     {
         particlesArray = new ParticleSystem.Particle[waveDPI * waveDPI];
-        particle.maxParticles = waveDPI * waveDPI;
+        var main = particle.main;
+        main.maxParticles = waveDPI * waveDPI;
         particle.Emit(waveDPI * waveDPI);
         particle.GetParticles(particlesArray);
     }

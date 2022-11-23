@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
+using UnityEngine.Events;
+using System;
 
 public class EndingCredit : MonoBehaviour
 {
     public FadeInOut fadeEffect;
 
-    private CachedVideoPlayer _videoPlayer;
+    private VideoPlayer _videoPlayer;
     private AudioSource _audioPlayer;
 
     private void Awake() 
     {
-        _videoPlayer = gameObject.GetComponent<CachedVideoPlayer>();
+        _videoPlayer = gameObject.GetComponent<VideoPlayer>();
         _audioPlayer = gameObject.GetComponent<AudioSource>();
     }
 
@@ -30,8 +32,7 @@ public class EndingCredit : MonoBehaviour
 
         fadeEffect.FadeOut();
 
-        yield return new WaitForSeconds(2);
-        _videoPlayer.Play();
+        yield return StartLoadCreaditVideo();
 
         fadeEffect.FadeIn();
 
@@ -44,5 +45,24 @@ public class EndingCredit : MonoBehaviour
             _videoPlayer.Play();
         else
             _videoPlayer.Stop();
+    }
+
+    public IEnumerator StartLoadCreaditVideo() 
+    {
+
+        bool isPrepared = false;
+        VideoPlayer.EventHandler OnPrepared = (VideoPlayer vp) => 
+        {
+            isPrepared = true;
+        };
+        _videoPlayer.prepareCompleted += OnPrepared;
+        _videoPlayer.Prepare();
+
+        yield return new WaitUntil(() => isPrepared);
+
+        _videoPlayer.prepareCompleted -= OnPrepared;
+        _videoPlayer.frame = 1;
+        _videoPlayer.Pause();
+        _videoPlayer.Play();
     }
 }

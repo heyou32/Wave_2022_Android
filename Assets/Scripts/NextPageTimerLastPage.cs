@@ -99,13 +99,15 @@ public class NextPageTimerLastPage : NextPageTimer
 
         EndingCredit ed = credit.GetComponent<EndingCredit>();
 
-        ed.fadeEffect.FadeOut();
-        yield return new WaitForSeconds(2);
+        yield return ed.fadeEffect.BeginFadeOut();
+        
+        credit.SetActive(true);
+        ed.SetEnableCreditVideo(true);
+
+        yield return ed.StartLoadCreaditVideo();
+        
         ed.fadeEffect.FadeIn();
 
-        credit.SetActive(true);
-
-        ed.SetEnableCreditVideo(true);
         yield return new WaitForSeconds(time);
         // popUpExit.SetActive(true);
         ed.SetEnableCreditVideo(false);

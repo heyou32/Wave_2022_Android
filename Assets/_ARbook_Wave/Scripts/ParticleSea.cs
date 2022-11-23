@@ -21,7 +21,8 @@ public class ParticleSea : MonoBehaviour
     void Start()
     {
         particlesArray = new ParticleSystem.Particle[seaResolution * seaResolution];
-        particle.maxParticles = seaResolution * seaResolution;
+        var main = particle.main;
+        main.maxParticles = seaResolution * seaResolution;
         particle.Emit(seaResolution * seaResolution);
         particle.GetParticles(particlesArray);
               
@@ -38,7 +39,7 @@ public class ParticleSea : MonoBehaviour
             for (int j = 0; j < seaResolution; j++)
             {
                 float zPos = Mathf.PerlinNoise(i * noiseScale + perlinNoiseAnimX, j * noiseScale + perlinNoiseAnimY);
-                particlesArray[i * seaResolution + j].color = colorGradient.Evaluate(zPos);
+                particlesArray[i * seaResolution + j].startColor = colorGradient.Evaluate(zPos);
                 particlesArray[i * seaResolution + j].position = new Vector3(i * spacing, zPos * heightScale, j * spacing);
             }
         }

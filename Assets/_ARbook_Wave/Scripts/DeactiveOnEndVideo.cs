@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class DeactiveOnEndVideo : MonoBehaviour
 {
-    private CachedVideoPlayer vp;
-
     private void Start() 
     {
-        vp = GetComponent<CachedVideoPlayer>();
-        vp.cache.loopPointReached += EndReached;
+        CachedVideoPlayer cachedVp = GetComponent<CachedVideoPlayer>();
+        VideoPlayer vp = GetComponent<VideoPlayer>();
+        if (cachedVp && cachedVp.cache)
+            cachedVp.cache.loopPointReached += EndReached;
+        else if (vp)
+            vp.loopPointReached += EndReached;
     }
 
     void EndReached(UnityEngine.Video.VideoPlayer vp)
