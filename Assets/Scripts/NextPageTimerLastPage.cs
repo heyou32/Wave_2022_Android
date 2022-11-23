@@ -11,41 +11,46 @@ public class NextPageTimerLastPage : NextPageTimer
     public float songTime, creditTime;
     public GameObject popUpExit;
 
-    Coroutine firstCoroutine;
+    Coroutine coroutine;
     public PageProgressBar progressBar;
     public MainSceneUiManager uiManager;
     public List<GameObject> addedUIs;
     public Button btnCredit;
-    private void Awake()
+    public Button btnReplay;
+
+    private void Start()
     {
-        songTime = delay;
+        btnCredit.onClick.AddListener(SkipToCredit);
+    }
+
+    void OnEnable()
+    {
         foreach (GameObject item in addedUIs)
         {
             uiManager.uiObjects.Add(item.GetComponent<Image>());
+            // item.SetActive(true);
         }
-    }
-    void OnEnable()
-    {
-        btnCredit.onClick.AddListener(SkipToCredit);
-        firstCoroutine = StartCoroutine(StartTimer(songTime-creditTime, creditTime));
+        coroutine = StartCoroutine(StartTimer(songTime - creditTime, creditTime));
     }
     void OnDisable()
     {
-        btnCredit.onClick.RemoveListener(SkipToCredit);
-        credit.SetActive(false);
+        foreach (GameObject item in addedUIs)
+        {
+            uiManager.uiObjects.Remove(item.GetComponent<Image>());
+            item.SetActive(false);
+        }
     }
-
 
     IEnumerator StartTimer(float first, float second)
     {
-        Debug.Log($"{this.firstCoroutine} is started");
+        Debug.Log($"{this.coroutine} is started");
         yield return new WaitForSeconds(first);
         StartCoroutine(Credit(second));
     }
     public void SkipToCredit()
     {
-        Debug.Log($"stop {this.firstCoroutine}");
-        StopCoroutine(this.firstCoroutine);
+        Debug.Log($"stop {this.coroutine}");
+        StopCoroutine(this.coroutine);
         firstSong.time = songTime - creditTime;
         progressBar._time = songTime - creditTime;
         StartCoroutine(Credit(creditTime));
@@ -55,8 +60,24 @@ public class NextPageTimerLastPage : NextPageTimer
     }
     IEnumerator Credit(float time)
     {
+        uiManager.uiObjects.Remove(addedUIs[1].GetComponent<Image>());
+        addedUIs[1].SetActive(false);
+        uiManager.uiObjects.Remove(btnReplay.GetComponent<Image>());    // replay button
+        btnReplay.gameObject.SetActive(false);
+
+        EndingCredit ed = credit.GetComponent<EndingCredit>();
+
+        ed.fadeEffect.FadeOut();
+        yield return new WaitForSeconds(2);
+        ed.fadeEffect.FadeIn();
+
         credit.SetActive(true);
+
+        ed.SetEnableCreditVideo(true);
         yield return new WaitForSeconds(time);
-        popUpExit.SetActive(true);
+        // popUpExit.SetActive(true);
+        ed.SetEnableCreditVideo(false);
+        MarkerManager.Instance.targetPageInfos[MarkerManager.Instance.currentPageIndex - 1].StartCoolDownTimer(10);
+        gameObject.SetActive(false);
     }
 }

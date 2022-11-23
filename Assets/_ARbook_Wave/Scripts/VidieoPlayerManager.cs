@@ -13,6 +13,12 @@ public class VidieoPlayerManager : MonoBehaviour
     {
         video = GetComponent<VideoPlayer>();
     }
+    private void OnEnable()
+    {
+       // firstSkipCheck = false;
+        //secondSkipCheck = false;
+        stopCheck = false;
+    }
     void Update()
     {
         curTime += Time.deltaTime;
