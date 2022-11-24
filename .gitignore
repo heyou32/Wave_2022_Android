@@ -59,3 +59,5 @@ sysinfo.txt
 crashlytics-build.properties
 ARFoundationRemoteInstaller
 
+UserSettings/
+Assets/StreamingAssets/build_info

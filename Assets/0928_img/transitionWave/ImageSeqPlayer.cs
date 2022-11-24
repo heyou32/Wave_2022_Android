@@ -13,4 +13,9 @@ public class ImageSeqPlayer : MonoBehaviour
     {
         animator.Play("PlaySeq");
     }
+
+    void OnEndSeq() 
+    {
+        gameObject.SetActive(false);
+    }
 }
