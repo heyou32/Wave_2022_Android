@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "192.168.0.8:5555",
         "name": "theater.selfportrait.wave",
-        "processId": 17877,
+        "processId": 12900,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -58,30 +58,6 @@
         },
         {
             "deviceId": "192.168.0.8:5555",
-            "name": "theater.selfportrait.wave",
-            "processId": 12977,
-            "exited": true
-        },
-        {
-            "deviceId": "192.168.0.8:5555",
-            "name": "theater.selfportrait.wave",
-            "processId": 10789,
-            "exited": true
-        },
-        {
-            "deviceId": "192.168.0.8:5555",
-            "name": "theater.selfportrait.wave",
-            "processId": 22542,
-            "exited": true
-        },
-        {
-            "deviceId": "192.168.0.8:5555",
-            "name": "theater.selfportrait.wave",
-            "processId": 10541,
-            "exited": true
-        },
-        {
-            "deviceId": "192.168.0.8:5555",
             "name": "com.sec.android.app.launcher",
             "processId": 2965,
             "exited": false
@@ -89,61 +65,37 @@
         {
             "deviceId": "192.168.0.8:5555",
             "name": "theater.selfportrait.wave",
-            "processId": 2872,
+            "processId": 1585,
+            "exited": true
+        },
+        {
+            "deviceId": "192.168.0.8:5555",
+            "name": "theater.selfportrait.wave",
+            "processId": 6028,
+            "exited": true
+        },
+        {
+            "deviceId": "192.168.0.8:5555",
+            "name": "theater.selfportrait.wave",
+            "processId": 9048,
+            "exited": true
+        },
+        {
+            "deviceId": "192.168.0.8:5555",
+            "name": "theater.selfportrait.wave",
+            "processId": 10173,
+            "exited": true
+        },
+        {
+            "deviceId": "192.168.0.8:5555",
+            "name": "com.google.android.youtube",
+            "processId": 4791,
             "exited": false
         },
         {
             "deviceId": "192.168.0.8:5555",
             "name": "theater.selfportrait.wave",
-            "processId": 13826,
-            "exited": false
-        },
-        {
-            "deviceId": "192.168.0.8:5555",
-            "name": "theater.selfportrait.wave",
-            "processId": 17653,
-            "exited": false
-        },
-        {
-            "deviceId": "192.168.0.8:5555",
-            "name": "theater.selfportrait.wave",
-            "processId": 18279,
-            "exited": false
-        },
-        {
-            "deviceId": "192.168.0.8:5555",
-            "name": "theater.selfportrait.wave",
-            "processId": 28939,
-            "exited": false
-        },
-        {
-            "deviceId": "192.168.0.8:5555",
-            "name": "theater.selfportrait.wave",
-            "processId": 31857,
-            "exited": false
-        },
-        {
-            "deviceId": "192.168.0.8:5555",
-            "name": "theater.selfportrait.wave",
-            "processId": 11780,
-            "exited": false
-        },
-        {
-            "deviceId": "192.168.0.8:5555",
-            "name": "theater.selfportrait.wave",
-            "processId": 15558,
-            "exited": false
-        },
-        {
-            "deviceId": "192.168.0.8:5555",
-            "name": "theater.selfportrait.wave",
-            "processId": 16622,
-            "exited": false
-        },
-        {
-            "deviceId": "192.168.0.8:5555",
-            "name": "theater.selfportrait.wave",
-            "processId": 17877,
+            "processId": 12900,
             "exited": false
         }
     ],

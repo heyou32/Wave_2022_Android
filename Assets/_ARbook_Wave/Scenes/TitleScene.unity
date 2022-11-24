@@ -363,7 +363,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 222.70001, y: 0}
+  m_AnchoredPosition: {x: 222.70007, y: 0}
   m_SizeDelta: {x: -614.60004, y: -110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &58243278
@@ -782,8 +782,8 @@ MonoBehaviour:
   m_StartAxis: 0
   m_CellSize: {x: 300, y: 300}
   m_Spacing: {x: 30, y: 30}
-  m_Constraint: 0
-  m_ConstraintCount: 2
+  m_Constraint: 1
+  m_ConstraintCount: 3
 --- !u!1 &160794883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,19 +1482,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.45
-  m_Text: "    AR \uD31D\uC5C5\uBD81<\uD30C\uB3C4; \uBD80\uC11C\uC9C0\uB294 \uD478\uB978
-    \uBC24\uB4E4> \uC5D0\uC11C\uB294 \uD398\uC774\uC9C0\uB97C \uD3BC\uCE60\uB54C
-    \uB9C8\uB2E4 \uC0C8\uB85C\uC6B4 \uACF5\uAC04\uC774 \uC5F4\uB9BD\uB2C8\uB2E4.
-    \uC5F4\uB9B0 \uACF5\uAC04\uC744 \uD1B5\uD574 \uAD00\uAC1D\uB4E4\uC740 \uC190\uB05D\uC5D0
-    \uC2A4\uBA70\uB4E4\uC5B4\uC628 \uC6B0\uC6B8\uC758 \uD30C\uB3C4\uB294 \uBB34\uC12D\uAC8C
-    \uC77C\uB801\uC774\uC9C0\uB9CC \uD658\uC0C1\uC801\uC774\uACE0, \uCC28\uAC00\uC6B4
-    \uD30C\uB780\uC0C9\uC744 \uB744\uACE0 \uC788\uC9C0\uB9CC \uC190\uC744 \uB2F4\uAE00
-    \uB9CC\uD07C\uC758 \uC628\uAE30\uAC00 \uC874\uC7AC\uD569\uB2C8\uB2E4. \uC740\uD558\uC640
-    \uAC19\uC774 \uAE4A\uC740 \uC6B0\uC6B8\uC5D0 \uBE60\uC838 \uD558\uB8E8\uD558\uB8E8\uB97C
-    \uBC84\uD168\uB0B4\uB294 \uC0AC\uB78C\uB4E4\uC774 \uC774 \uC791\uD488\uC774 \uAC74\uB124\uB294
-    \uC704\uB85C\uB97C \uBC1B\uACE0 \uADF8 \uC704\uB85C\uB97C \uC790\uC591\uBD84
-    \uC0BC\uC544 \uD798\uB4E0 \uC2DC\uAE30\uB97C \uC798 \uC9C0\uB098\uAC08 \uC218
-    \uC788\uAE30\uB97C \uBC14\uB78D\uB2C8\uB2E4."
+  m_Text: 
 --- !u!222 &281332279
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1670,6 +1658,7 @@ GameObject:
   - component: {fileID: 303674546}
   - component: {fileID: 303674545}
   - component: {fileID: 303674544}
+  - component: {fileID: 303674543}
   m_Layer: 5
   m_Name: Button_About
   m_TagString: Untagged
@@ -1697,6 +1686,20 @@ RectTransform:
   m_AnchoredPosition: {x: 75, y: -75}
   m_SizeDelta: {x: 350, y: 125}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &303674543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303674541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c5c9f894e8ada429ee39480d0fedd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 5860088860561867919}
+  other: {fileID: 1171293352}
 --- !u!114 &303674544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1741,41 +1744,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5860088860561867919}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 303674543}
+        m_TargetAssemblyTypeName: TitlePopupButton, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 5640968795547028258}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Open
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1171293354}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Close
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &303674545
 MonoBehaviour:
@@ -3293,7 +3272,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 460.00006, y: -297}
+  m_AnchoredPosition: {x: 460.00012, y: -297}
   m_SizeDelta: {x: 43, y: 65}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &676536308
@@ -3425,6 +3404,7 @@ GameObject:
   - component: {fileID: 720412967}
   - component: {fileID: 720412966}
   - component: {fileID: 720412965}
+  - component: {fileID: 720412964}
   m_Layer: 5
   m_Name: Button_Guide
   m_TagString: Untagged
@@ -3452,6 +3432,20 @@ RectTransform:
   m_AnchoredPosition: {x: 75, y: -275}
   m_SizeDelta: {x: 350, y: 125}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &720412964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720412962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c5c9f894e8ada429ee39480d0fedd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1171293352}
+  other: {fileID: 5860088860561867919}
 --- !u!114 &720412965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3496,34 +3490,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1171293352}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1171293354}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Open
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 5640968795547028258}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
+      - m_Target: {fileID: 720412964}
+        m_TargetAssemblyTypeName: TitlePopupButton, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6896,7 +6866,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.000091552734, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 180, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1412050061
 MonoBehaviour:
@@ -6911,14 +6881,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.07058824, g: 0.07058824, b: 0.49019608, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: efc7dae83b75ebd45ba2d8827241fb73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 69d9dfc239e59464a9d6d8f50c41e3a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9741,7 +9711,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 222.70001, y: 0}
+  m_AnchoredPosition: {x: 222.70007, y: 0}
   m_SizeDelta: {x: -614.60004, y: -110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7123295813600027546

@@ -24,8 +24,8 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_ProjectLocaleIdentifier:
-    m_Code: ko-KR
-  m_PreloadBehavior: 1
+    m_Code: en-US
+  m_PreloadBehavior: 3
   m_InitializeSynchronously: 0
   references:
     version: 1
@@ -36,7 +36,10 @@ MonoBehaviour:
         m_LocaleId:
           m_Code: en-US
     00000001:
-      type: {class: SystemLocaleSelector, ns: UnityEngine.Localization.Settings, asm: Unity.Localization}
+      type: {class: CommandLineLocaleSelector, ns: UnityEngine.Localization.Settings,
+        asm: Unity.Localization}
+      data:
+        m_CommandLineArgument: -language=en
     00000002:
       type: {class: LocalesProvider, ns: UnityEngine.Localization.Settings, asm: Unity.Localization}
     00000003:

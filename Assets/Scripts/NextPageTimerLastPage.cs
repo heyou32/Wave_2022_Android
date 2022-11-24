@@ -66,18 +66,24 @@ public class NextPageTimerLastPage : NextPageTimer
         btnReplay.gameObject.SetActive(false);
 
         EndingCredit ed = credit.GetComponent<EndingCredit>();
-
-        ed.fadeEffect.FadeOut();
-        yield return new WaitForSeconds(2);
-        ed.fadeEffect.FadeIn();
+        RawImage creditTargetImage = ed.gameObject.GetComponent<RawImage>();
+        creditTargetImage.enabled = false;
 
         credit.SetActive(true);
 
-        ed.SetEnableCreditVideo(true);
+        ed.fadeEffect.FadeOut();
+        yield return new WaitForSeconds(2); 
+
+        yield return ed.StartLoadCreaditVideo();
+        creditTargetImage.enabled = true;
+        
+        ed.fadeEffect.FadeIn();
+
         yield return new WaitForSeconds(time);
-        // popUpExit.SetActive(true);
-        ed.SetEnableCreditVideo(false);
-        MarkerManager.Instance.targetPageInfos[MarkerManager.Instance.currentPageIndex - 1].StartCoolDownTimer(10);
+
+        credit.SetActive(false);
+
+        MarkerManager.Instance.targetPageInfos[5].StartCoolDownTimer(10);
         gameObject.SetActive(false);
     }
 }

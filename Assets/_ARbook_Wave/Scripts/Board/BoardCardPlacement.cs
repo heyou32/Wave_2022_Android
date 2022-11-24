@@ -9,4 +9,10 @@ public class BoardCardPlacement : CardPlacement
         base.OnCardPlacement();
         targetList[0].GetComponent<BoardPlaceTargetSetter>().DoAction();
     }
+
+    [ContextMenu("TestCardPlacement")]
+    public void TestCardPlacement() 
+    {
+        OnCardPlacement();
+    }
 }

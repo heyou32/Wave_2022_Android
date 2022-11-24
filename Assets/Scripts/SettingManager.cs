@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Localization.Settings;
 
 [System.Serializable]
 public struct SettingValue {
@@ -53,6 +54,8 @@ public class SettingManager : MonoBehaviour
         setting.narrationVolume = PlayerPrefs.GetFloat("narrationVolume", 1);
 
         currentSetting = setting;
+
+        LocalizationSettings.SelectedLocale.Identifier = "en-US";
     }
 
     private float LinearToDecibel(float linear)
