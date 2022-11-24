@@ -3,16 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-// 1st song : 180
-// 2nd song : 200
-// credit        : 92
 public class NextPageTimerLastPage : NextPageTimer
+
 {
     public GameObject credit;
     public AudioSource firstSong;
-    public AudioSource secondSong;
-    public float firstSongTime, secondSongTime, creditTime;
+    public float songTime, creditTime;
     public GameObject popUpExit;
 
     Coroutine coroutine;
@@ -20,15 +16,13 @@ public class NextPageTimerLastPage : NextPageTimer
     public MainSceneUiManager uiManager;
     public List<GameObject> addedUIs;
     public Button btnCredit;
-    public Button btnSecond;
     public Button btnReplay;
 
     private void Start()
     {
-        //secondSong = credit.GetComponent<AudioSource>();
         btnCredit.onClick.AddListener(SkipToCredit);
-        btnSecond.onClick.AddListener(SkipToSencond);
     }
+
     void OnEnable()
     {
         foreach (GameObject item in addedUIs)
@@ -36,9 +30,7 @@ public class NextPageTimerLastPage : NextPageTimer
             uiManager.uiObjects.Add(item.GetComponent<Image>());
             // item.SetActive(true);
         }
-        coroutine = StartCoroutine(StartTimer(firstSongTime, secondSongTime));
-
-        //if (secondSong.isPlaying) secondSong.Stop();
+        coroutine = StartCoroutine(StartTimer(songTime - creditTime, creditTime));
     }
     void OnDisable()
     {
@@ -47,73 +39,45 @@ public class NextPageTimerLastPage : NextPageTimer
             uiManager.uiObjects.Remove(item.GetComponent<Image>());
             item.SetActive(false);
         }
-        if (secondSong.isPlaying) secondSong.Stop();
     }
-
 
     IEnumerator StartTimer(float first, float second)
     {
         Debug.Log($"{this.coroutine} is started");
         yield return new WaitForSeconds(first);
-
-        StartCoroutine(SecondSongPlay());
-        //StartCoroutine(Credit(second));
-    }
-
-    public void SkipToSencond()
-    {
-        StopCoroutine(this.coroutine);
-        firstSong.Stop();
-        progressBar._time = firstSongTime;
-        coroutine = StartCoroutine(SecondSongPlay());
+        StartCoroutine(Credit(second));
     }
     public void SkipToCredit()
     {
         Debug.Log($"stop {this.coroutine}");
         StopCoroutine(this.coroutine);
-        firstSong.Stop();
-        secondSong.time = secondSongTime - creditTime;
-        secondSong.Play();
-        progressBar._time = firstSongTime + secondSongTime - creditTime;
+        firstSong.time = songTime - creditTime;
+        progressBar._time = songTime - creditTime;
         StartCoroutine(Credit(creditTime));
-    }
-    IEnumerator SecondSongPlay()
-    {
-        btnSecond.gameObject.SetActive(false);
-        uiManager.uiObjects.Remove(addedUIs[2].GetComponent<Image>());
-        addedUIs[2].SetActive(false);
 
-        secondSong.Play();
-        yield return new WaitForSeconds(secondSongTime - creditTime);
-        StartCoroutine(Credit(creditTime));
+        uiManager.uiObjects.RemoveAt(uiManager.uiObjects.Count - 1);
+        addedUIs[addedUIs.Count - 1].SetActive(false);
     }
     IEnumerator Credit(float time)
     {
-        btnSecond.gameObject.SetActive(false);
         uiManager.uiObjects.Remove(addedUIs[1].GetComponent<Image>());
         addedUIs[1].SetActive(false);
-        uiManager.uiObjects.Remove(addedUIs[2].GetComponent<Image>());
-        addedUIs[2].SetActive(false);
         uiManager.uiObjects.Remove(btnReplay.GetComponent<Image>());    // replay button
         btnReplay.gameObject.SetActive(false);
 
         EndingCredit ed = credit.GetComponent<EndingCredit>();
 
-        yield return ed.fadeEffect.BeginFadeOut();
-        
-        credit.SetActive(true);
-        ed.SetEnableCreditVideo(true);
-
-        yield return ed.StartLoadCreaditVideo();
-        
+        ed.fadeEffect.FadeOut();
+        yield return new WaitForSeconds(2);
         ed.fadeEffect.FadeIn();
 
+        credit.SetActive(true);
+
+        ed.SetEnableCreditVideo(true);
         yield return new WaitForSeconds(time);
         // popUpExit.SetActive(true);
         ed.SetEnableCreditVideo(false);
-        credit.SetActive(false);
-
-        MarkerManager.Instance.targetPageInfos[5].StartCoolDownTimer(10);
+        MarkerManager.Instance.targetPageInfos[MarkerManager.Instance.currentPageIndex - 1].StartCoolDownTimer(10);
         gameObject.SetActive(false);
     }
 }

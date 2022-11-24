@@ -17,6 +17,25 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 8129d3925b260ac428bcb50640fd3789, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 55150632960
+    m_Localized: GUIDE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1121137188864
+    m_Localized: "\xB7 Even when there is no activity going on,\n  use the camera
+      to find and recognize\n  images on the page."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16369080590336
+    m_Localized: "1. We recommend using the app in a fully lit space. \r\n2. Place
+      the camera in front of each page. \n    Once the app recognizes the current
+      page, \n    move your device around to explore the world of The Waves.\n3.
+      Find each image on the page and place it directly \n    in front of  the camera.
+      \r\n4. If you are having trouble, remove the camera and try again. \r\n5. For
+      Celeste\u2019s surfboard and dolphin: \n    place the images directly in front
+      of the camera \n    and move your device  around. \r\n"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
