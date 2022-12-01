@@ -1,110 +1,13 @@
 {
-    "m_SelectedDeviceId": "192.168.0.8:5555",
+    "m_SelectedDeviceId": "",
     "m_SelectedPackage": {
-        "deviceId": "192.168.0.8:5555",
-        "name": "theater.selfportrait.wave",
-        "processId": 14759,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
-    "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "R3CN60HFWJH",
-            "name": "theater.selfportrait.wave",
-            "processId": 6069,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CN60HFWJH",
-            "name": "theater.selfportrait.wave",
-            "processId": 16727,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CN60HFWJH",
-            "name": "com.nhn.android.webtoon",
-            "processId": 29191,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CN60HFWJH",
-            "name": "com.sec.android.app.launcher",
-            "processId": 2965,
-            "exited": true
-        },
-        {
-            "deviceId": "RFCM908DCXD",
-            "name": "com.playrix.zoo_m3.gplay",
-            "processId": 13969,
-            "exited": false
-        },
-        {
-            "deviceId": "RFCM908DCXD",
-            "name": "theater.selfportrait.wave",
-            "processId": 28498,
-            "exited": false
-        },
-        {
-            "deviceId": "RFCM908DCXD",
-            "name": "theater.selfportrait.wave",
-            "processId": 2145,
-            "exited": false
-        },
-        {
-            "deviceId": "192.168.0.8:5555",
-            "name": "com.nhn.android.webtoon",
-            "processId": 29191,
-            "exited": false
-        },
-        {
-            "deviceId": "192.168.0.8:5555",
-            "name": "com.sec.android.app.launcher",
-            "processId": 2965,
-            "exited": false
-        },
-        {
-            "deviceId": "192.168.0.8:5555",
-            "name": "theater.selfportrait.wave",
-            "processId": 1585,
-            "exited": true
-        },
-        {
-            "deviceId": "192.168.0.8:5555",
-            "name": "theater.selfportrait.wave",
-            "processId": 6028,
-            "exited": true
-        },
-        {
-            "deviceId": "192.168.0.8:5555",
-            "name": "theater.selfportrait.wave",
-            "processId": 9048,
-            "exited": true
-        },
-        {
-            "deviceId": "192.168.0.8:5555",
-            "name": "theater.selfportrait.wave",
-            "processId": 10173,
-            "exited": true
-        },
-        {
-            "deviceId": "192.168.0.8:5555",
-            "name": "com.google.android.youtube",
-            "processId": 4791,
-            "exited": false
-        },
-        {
-            "deviceId": "192.168.0.8:5555",
-            "name": "theater.selfportrait.wave",
-            "processId": 12900,
-            "exited": false
-        },
-        {
-            "deviceId": "192.168.0.8:5555",
-            "name": "theater.selfportrait.wave",
-            "processId": 14759,
-            "exited": false
-        }
-    ],
+    "m_KnownPackagesForSerialization": [],
     "m_Tags": {
         "m_Entries": [
             {
@@ -113,7 +16,7 @@
             },
             {
                 "m_Name": "No Filter",
-                "m_Selected": false
+                "m_Selected": true
             },
             {
                 "m_Name": "",
@@ -133,25 +36,14 @@
             },
             {
                 "m_Name": "CRASH",
-                "m_Selected": true
+                "m_Selected": false
             }
         ]
     },
     "m_MemoryViewerState": {
-        "MemoryWindowHeight": 300.0,
-        "MemoryWindowWidth": 170.0,
-        "MemoryTypeEnabled": [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-        ],
+        "MemoryWindowHeight": 0.0,
+        "MemoryWindowWidth": 0.0,
+        "MemoryTypeEnabled": [],
         "MemoryGroup": 2,
         "Behavior": 0
     },
