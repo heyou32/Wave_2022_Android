@@ -134,9 +134,14 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.0.0
+  bundleVersion: 1.0.1
   preloadedAssets:
   - {fileID: 11400000, guid: a03eb1d801a8b9445bdc4c9c3bd78e3b, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -197,7 +202,7 @@ PlayerSettings:
     iPhone: 0
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
-  AndroidBundleVersionCode: 105
+  AndroidBundleVersionCode: 112
   AndroidMinSdkVersion: 24
   AndroidTargetSdkVersion: 31
   AndroidPreferredInstallLocation: 1
@@ -284,7 +289,7 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: "C:/Users/asd08/OneDrive/\uBB38\uC11C/\uD30C\uB3C4_\uBC31\uC5C5/user.keystore"
+  AndroidKeystoreName: '{inproject}: Key/user.keystore'
   AndroidKeyaliasName: wave
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0

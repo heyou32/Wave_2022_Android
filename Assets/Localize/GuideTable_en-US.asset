@@ -23,8 +23,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1121137188864
-    m_Localized: "\xB7 Even when there is no activity going on,\n  use the camera
-      to find and recognize\n  images on the page."
+    m_Localized: "\xB7 If there is no activity going on, use the camera\r\n  to find
+      and recognize images on the page."
     m_Metadata:
       m_Items: []
   - m_Id: 16369080590336
